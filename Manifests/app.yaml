@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/hoejsagerc/emailreply_io.git
     targetRevision: production
-    path: manifests
+    path: Manifests
     directory:
       recurse: true
   destination:
