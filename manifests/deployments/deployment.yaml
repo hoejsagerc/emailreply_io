@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emailreplyio
+  namespace: emailreplyio
+  labels:
+    app: emailreplyio
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: emailreplyio
+  template:
+    metadata:
+      labels:
+        app: emailreplyio
+    spec:
+      containers:
+      - env:
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: openai-api-key
+              key: openai-api-key 
+        name: emailreplyio-web-0
+        image: choejsager/emailreply_io:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+      imagePullSecrets:
+        - name: dockerhub-credentials
