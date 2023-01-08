@@ -1,0 +1,109 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\EmailReplyIo.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EmailReplyIo.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\img\\illustrations\\Message sent - 1280x958.png",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\Message sent - 1280x958.png"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\img\\illustrations\\presentation.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\presentation.svg"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\img\\illustrations\\ranking.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\ranking.svg"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\img\\illustrations\\report.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\report.svg"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\js\\startup-modern.js",
+      "PackagePath": "staticwebassets\\assets\\js\\startup-modern.js"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.EmailReplyIo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.EmailReplyIo.props",
+      "PackagePath": "build\\EmailReplyIo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.EmailReplyIo.props",
+      "PackagePath": "buildMultiTargeting\\EmailReplyIo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.EmailReplyIo.props",
+      "PackagePath": "buildTransitive\\EmailReplyIo.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

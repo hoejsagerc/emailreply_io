@@ -1,0 +1,173 @@
+﻿@page "/"
+@using System.Net.Http.Headers;
+@using System.Text.Json;
+@using System.Text;
+@using Newtonsoft.Json;
+
+<PageTitle>Index</PageTitle>
+
+<section class="my-5">
+    <div class="container py-4 py-xl-5">
+        <div class="row gy-4 gy-md-0">
+            <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                <div><img class="rounded img-fluid fit-cover" style="min-height: 300px;" src="assets/img/illustrations/presentation.svg" width="800"></div>
+            </div>
+            <div class="col">
+                <div style="max-width: 450px;">
+                    <h3 class="fw-bold pb-md-4">How can EmailReply.io help you be more&nbsp;<span class="custom-underline">productive</span>&nbsp;?</h3>
+                    <p class="text-muted py-4 py-md-0">Utilize our OpenAI's AI technology to generate professional responses to any written communication.</p>
+                    <div class="row gy-4 row-cols-2 row-cols-md-2">
+                        <div class="col">
+                            <div>
+                                <span class="fs-2 fw-bold text-primary bg-warning"></span>
+                                <p class="fw-normal text-muted">Create response to a text message</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <span class="fs-2 fw-bold text-primary bg-warning"></span>
+                                <p class="fw-normal text-muted">Create response to a customer email</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <span class="fs-2 fw-bold text-primary bg-warning"></span>
+                                <p class="fw-normal text-muted">Create response to a specific programming question on slack</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <span class="fs-2 fw-bold text-primary bg-warning"></span>
+                                <p class="fw-normal text-muted">Write a professional response to any written form of coomunication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-4 py-xl-5 my-5">
+    <div class="container" >
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <div style="max-width: 750px; margin-left: auto; margin-right: auto;">
+                    <h3 class="my-3 fw-bold" id="tool">Please copy the content of the email you would like a response to in the field below.</h3>
+                </div>
+                <InputTextArea id="Text" @bind-Value="@prompt" class="form-control text-field" style="height: 500px; max-width: 750px; margin-right: auto; margin-left: auto;"></InputTextArea>
+                <button class="btn btn-primary mt-5 mb-5 button ripple" @onclick="AskOpenAI" type="button">Generate Response</button>
+            </div>
+        </div>
+        @if (responseStatus == "OK")
+        {
+            <div class="row my-5">
+                <div class="col">
+                    <div style="max-width: 700px; margin-right: auto; margin-left: auto;">
+                        <h3 class="mb-4">AI generated response:</h3>
+                        <div class="pt-4 pb-2" style="border-top: solid 3px rgba(58, 58, 58, 0.726); border-bottom: solid 3px rgba(58, 58, 58, 0.726);">
+                            <p class="lead">@promptText</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+
+@code {
+    private string? APIKey { get; set; } = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
+
+    private string prompt { get; set; } = "";
+
+    private string responseStatus { get; set; } = "";
+
+    private string errorMessage { get; set; } = "";
+
+    private string promptText { get; set; } = "";
+
+
+    private async Task AskOpenAI()
+    {
+
+        var client = new HttpClient();
+
+        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", APIKey);
+
+        PromptRequest promptRequest = new PromptRequest();
+
+        promptRequest.prompt = "Write a reply to the following email: " + prompt.Replace("\n", " ");
+
+        var content = new StringContent(JsonConvert.SerializeObject(promptRequest));
+
+        content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+        var response = await client.PostAsync("https://api.openai.com/v1/completions", content);
+
+        var responseContent = await response.Content.ReadAsStringAsync();
+
+        JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                StringEscapeHandling = StringEscapeHandling.EscapeNonAscii
+            };
+
+        var promptResponse = JsonConvert.DeserializeObject<PromptResponse>(responseContent, settings);
+
+        promptText = promptResponse.Choices[0].Text;
+
+        if (response.IsSuccessStatusCode)
+        {
+            responseStatus = response.StatusCode.ToString();
+        }
+        else
+        {
+            responseStatus = response.StatusCode.ToString();
+            errorMessage = response.Content.ReadAsStringAsync().Result;
+        }
+    }
+}
+
+
+<section class="py-4 py-xl-5 mb-5">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 class="display-6 fw-bold mb-5"><span class="pb-3 custom-underline-big">FAQ /Terms of Use&nbsp;<br></span></h2>
+                <p class="text-muted mb-5">EmailReply.io utilizes the OpenAI API to generate AI responses. By using this tool, you agree to the terms of use specified by OpenAI. You can read more about these terms at the following link:<br><a href="https://openai.com/terms/#:~:text=You%20must%20be%2018%20years,to%20register%20for%20an%20account.">Terms of Use (openai.com)</a><br></p>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion text-muted" role="tablist" id="accordion-1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">How is the tool able generate a reply to an email ?</button></h2>
+                        <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p>ChatGPT is a variant of GPT-3, which is a language generation model developed by OpenAI. It is able to generate responses to an email by processing the input email and using its understanding of language and context to generate a relevant and coherent response. The model has been trained on a large dataset of text, including many examples of emails and responses, which allows it to generate responses that are similar to those that a human might write. However, it is important to note that ChatGPT is an AI and may not always generate responses that are appropriate or accurate. It is always a good idea to review the output of any language generation model carefully before using it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">How to use the tool ?</button></h2>
+                        <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p class="mb-0">To use the tool, simply paste the text of any email, chat message, or other written communication that you need a response to. The tool will then send the message to the OpenAI AI, which will generate a professional, relevant response. This can be especially useful when you need to craft a specific reply to an email but are unsure of the best way to do so. Just copy the content of the email into the tool and use the generated response as a starting point. As with any automated tool, it is always a good idea to review the output carefully before sending it to others.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="true" aria-controls="accordion-1 .item-3">Is my data beeing stored anywhere ?&nbsp;</button></h2>
+                        <div class="accordion-collapse collapse show item-3" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p class="mb-0">It is possible that OpenAI may store data that you input into their tools or services, as well as data generated as a result of your use of those tools or services. This data may be used for a variety of purposes, including improving the performance of the tools or services, training machine learning models, and conducting research. It is always a good idea to review the terms of use and privacy policy of any service you use to understand how your data may be used. If you have specific concerns about the data that OpenAI collects or how it is used, you may want to contact them directly to ask for more information.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<AnchorNavigation/>

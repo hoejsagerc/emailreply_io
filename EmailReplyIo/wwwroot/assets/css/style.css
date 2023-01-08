@@ -1,0 +1,52 @@
+.custom-underline {
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
+    text-decoration-color: #f900a5;
+}
+
+.custom-underline-big {
+    text-decoration: underline;
+    text-decoration-thickness: 10px;
+    text-decoration-color: #f900a5;
+}
+
+.text-field {
+    border-style: outset;
+    border-color: #f900a5;
+    border-width: thick;
+    box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.35)
+}
+
+.img-about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Use a more specific selector if possible */
+*[id] {
+    scroll-margin-top: 5rem;
+}
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+    .ripple:hover {
+        background: #3b6eb4 radial-gradient(circle, transparent 1%, #42eeff 1%) center/15000%;
+    }
+
+    .ripple:active {
+        background-color: #6eb9f7;
+        background-size: 100%;
+        transition: background 0s;
+    }
+
+/* Button style */
+.button {
+    border-color: rgba(255,255,255,0);
+    cursor: pointer;
+    background-color: rgb(249,0,165);
+}
