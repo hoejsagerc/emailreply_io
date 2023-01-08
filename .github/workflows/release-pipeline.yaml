@@ -41,10 +41,10 @@ jobs:
     - name: Update manifest
       run: |
         echo "Updating image from:"
-        cat ./Manifests/deployments/deployment.yaml | grep -i "image:"
-        sed -i "s\choejsager/emailreply_io:.*\choejsager/emailreply_io:${GITHUB_RUN_NUMBER}\g" ./Manifests/deployments/deployment.yaml
+        cat ./manifests/deployments/deployment.yaml | grep -i "image:"
+        sed -i "s\choejsager/emailreply_io:.*\choejsager/emailreply_io:${GITHUB_RUN_NUMBER}\g" ./manifests/deployments/deployment.yaml
         echo "Updated image to:"
-        cat ./Manifests/deployments/deployment.yaml | grep -i "image:"
+        cat ./manifests/deployments/deployment.yaml | grep -i "image:"
     - name: Commit files
       run: |
         git config --local user.email "christian@hoejsager.com"
