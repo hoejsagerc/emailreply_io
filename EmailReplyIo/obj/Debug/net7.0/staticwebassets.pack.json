@@ -33,10 +33,6 @@
       "PackagePath": "staticwebassets\\assets\\img\\illustrations\\report.svg"
     },
     {
-      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\js\\startup-modern.js",
-      "PackagePath": "staticwebassets\\assets\\js\\startup-modern.js"
-    },
-    {
       "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },

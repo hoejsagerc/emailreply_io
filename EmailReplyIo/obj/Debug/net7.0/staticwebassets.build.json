@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cqq5CDrWcNEJSGqhK1IptAtFswhIpoYUcmIjregaMjk=",
+  "Hash": "GLhcFZe6Wt+P0AFX8lFePpnwujk/0TWiaopfbXL2I4c=",
   "Source": "EmailReplyIo",
   "BasePath": "_content/EmailReplyIo",
   "Mode": "Default",
@@ -168,23 +168,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\illustrations\\report.svg"
-    },
-    {
-      "Identity": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\js\\startup-modern.js",
-      "SourceId": "EmailReplyIo",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\",
-      "BasePath": "_content/EmailReplyIo",
-      "RelativePath": "assets/js/startup-modern.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\js\\startup-modern.js"
     },
     {
       "Identity": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\bootstrap\\bootstrap.min.css",

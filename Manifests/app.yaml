@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: emailreplyio
+  namespace: argocd
+spec:
+  project: emailreply
+  source:
+    repoURL: https://github.com/hoejsagerc/emailreply_io.git
+    targetRevision: production
+    path: manifests
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: emailreplyio
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false

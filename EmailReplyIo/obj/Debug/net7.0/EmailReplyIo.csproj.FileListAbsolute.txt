@@ -23,7 +23,6 @@ C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\staticwebas
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\scopedcss\bundle\EmailReplyIo.styles.css
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\scopedcss\projectbundle\EmailReplyIo.bundle.scp.css
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\EmailReplyIo.csproj.CopyComplete
