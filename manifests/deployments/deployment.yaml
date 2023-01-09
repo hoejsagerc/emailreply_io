@@ -23,7 +23,7 @@ spec:
               name: openai-api-key
               key: openai-api-key 
         name: emailreplyio-web-0
-        image: choejsager/emailreply_io:14
+        image: choejsager/emailreply_io:15
         imagePullPolicy: Always
         ports:
         - containerPort: 80
