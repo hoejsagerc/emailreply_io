@@ -12,7 +12,7 @@ spec:
       port:
         number: 80
   rules:
-  - host: www.emailreply.io
+  - host: emailreply.io
     http:
       paths:
       - path: /
