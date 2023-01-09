@@ -4,11 +4,11 @@ metadata:
   name: emailreplyio
   namespace: argocd
 spec:
-  project: emailreply
+  project: emailreplyio
   source:
     repoURL: https://github.com/hoejsagerc/emailreply_io.git
     targetRevision: production
-    path: Manifests
+    path: manifests
     directory:
       recurse: true
   destination:
