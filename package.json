@@ -1,0 +1,12 @@
+{
+  "name": "EmailReply.io",
+  "version": "0.0.0",
+  "description": "EmailReply.io is a free webapplication whích utilizes ChatGPT to generate email responses",
+  "homepage": "https://emailreply.io",
+  "licence": "MIT",
+  "bugs": "https://github.com/hoejsagerc/emailreply_io/issues",
+  "author": {
+    "name": "Christian Højsager",
+    "email": "info@emailreply.io"
+  }
+}
