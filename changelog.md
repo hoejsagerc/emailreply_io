@@ -1,3 +1,12 @@
+## [0.0.4](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.3...v0.0.4) (2023-01-09)
+
+
+### Bug Fixes
+
+* :bug: added www.emailreply.io as a host rule for the ingress ([5a818f0](https://github.com/hoejsagerc/emailreply_io/commit/5a818f0169f8b432ae2cc6b709e97b59ad02dc5a))
+
+
+
 ## [0.0.3](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.2...v0.0.3) (2023-01-09)
 
 
