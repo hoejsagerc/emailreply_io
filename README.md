@@ -3,7 +3,7 @@
 EmailReply.io is an open source web application build with .NET 7 and Blazor.
 
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/hoejsagerc/emailreply_io/release-pipeline.yml) ![GitHub issues](https://img.shields.io/github/issues/hoejsagerc/emailreply_io) ![GitHub package.json version](https://img.shields.io/github/package-json/v/hoejsagerc/emailreply_io) ![GitHub Release Date](https://img.shields.io/github/release-date/hoejsagerc/emailreply_io) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/hoejsagerc/emailreply_io)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/hoejsagerc/emailreply_io/release-pipeline.yaml) ![GitHub issues](https://img.shields.io/github/issues/hoejsagerc/emailreply_io) ![GitHub package.json version](https://img.shields.io/github/package-json/v/hoejsagerc/emailreply_io) ![GitHub Release Date](https://img.shields.io/github/release-date/hoejsagerc/emailreply_io) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/hoejsagerc/emailreply_io)
 
 </br>
 
