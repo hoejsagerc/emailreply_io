@@ -3,8 +3,6 @@ name: CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 
 jobs:
@@ -28,8 +26,9 @@ jobs:
         cd ./EmailReplyIo
         docker build -t choejsager/emailreply_io:$GITHUB_RUN_NUMBER .
         docker push choejsager/emailreply_io:$GITHUB_RUN_NUMBER
-  
-  release:
+
+
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -45,13 +44,45 @@ jobs:
         sed -i "s\choejsager/emailreply_io:.*\choejsager/emailreply_io:${GITHUB_RUN_NUMBER}\g" ./manifests/deployments/deployment.yaml
         echo "Updated image to:"
         cat ./manifests/deployments/deployment.yaml | grep -i "image:"
+
     - name: Commit files
       run: |
         git config --local user.email "christian@hoejsager.com"
         git config --local user.name "hoejsagerc"
         git commit -a -m "Creating release from: $GITHUB_RUN_NUMBER"
+
     - name: GitHub Push
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GH_TOKEN }}
         branch: production
+
+
+  release:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3 
+      with:
+        ref: main
+    
+    - name: Conventional Changelog Action
+      id: changelog
+      uses: TriPSs/conventional-changelog-action@v3.18.0
+      with:
+        github-token: ${{ github.token }}
+        version-file: "./package.json"
+        output-file: './changelog.md'
+        skip-on-empty: 'false'
+        git-branch: main
+      
+    - name: Create release
+      uses: actions/create-release@v1
+      if: ${{ steps.changelog.outputs.skipped == 'false' }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        tag_name: ${{ steps.changelog.outputs.tag }}
+        release_name: ${{ steps.changelog.outputs.tag }}
+        body: ${{ steps.changelog.outputs.clean_changelog }}
