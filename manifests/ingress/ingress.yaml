@@ -22,6 +22,16 @@ spec:
             name: svc-emailreplyio
             port:
               number: 80
+  - host: www.emailreply.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-emailreplyio
+            port:
+              number: 80
   tls:
   - hosts:
     - emailreply
