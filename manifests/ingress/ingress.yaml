@@ -10,7 +10,7 @@ spec:
     service:
       name: svc-emailreplyio
       port:
-        number: 5000
+        number: 80
   rules:
   - host: emailreply.io
     http:
@@ -21,7 +21,7 @@ spec:
           service:
             name: svc-emailreplyio
             port:
-              number: 5000
+              number: 80
   tls:
   - hosts:
     - emailreply
