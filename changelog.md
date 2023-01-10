@@ -1,3 +1,7 @@
+## [0.0.6](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.5...v0.0.6) (2023-01-10)
+
+
+
 ## [0.0.5](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.4...v0.0.5) (2023-01-09)
 
 
@@ -21,10 +25,6 @@
 ### Bug Fixes
 
 * :bug: url change for badge in readme file ([6832d80](https://github.com/hoejsagerc/emailreply_io/commit/6832d80cb41bc0fd3fd70e77fda42efa157d8a9e))
-
-
-
-## 0.0.1 (2023-01-09)
 
 
 
