@@ -2,6 +2,7 @@
 @using System.Net.Http.Headers;
 @using System.Text.Json;
 @using System.Text;
+@using EmailReplyIo.Interfaces;
 @using Newtonsoft.Json;
 
 <PageTitle>Index</PageTitle>
@@ -49,81 +50,53 @@
 </section>
 
 <section class="py-4 py-xl-5 my-5">
-    <div class="container" >
+    <div class="container">
         <div class="row text-center">
             <div class="col-lg-12">
                 <div style="max-width: 750px; margin-left: auto; margin-right: auto;">
                     <h3 class="my-3 fw-bold" id="tool">Please copy the content of the email you would like a response to in the field below.</h3>
                 </div>
                 <InputTextArea id="Text" @bind-Value="@prompt" class="form-control text-field" style="height: 500px; max-width: 750px; margin-right: auto; margin-left: auto;"></InputTextArea>
-                <button class="btn btn-primary mt-5 mb-5 button ripple" @onclick="AskOpenAI" type="button">Generate Response</button>
+                <button class="btn btn-primary mt-5 mb-5 button ripple" @onclick="GetOpenAIResponse" type="button">Generate Response</button>
             </div>
         </div>
-        @if (responseStatus == "OK")
+        @if (promptText != null)
         {
-            <div class="row my-5">
-                <div class="col">
-                    <div style="max-width: 700px; margin-right: auto; margin-left: auto;">
-                        <h3 class="mb-4">AI generated response:</h3>
-                        <div class="pt-4 pb-2" style="border-top: solid 3px rgba(58, 58, 58, 0.726); border-bottom: solid 3px rgba(58, 58, 58, 0.726);">
-                            <p class="lead">@promptText</p>
-                        </div>
+        <div class="row my-5">
+            <div class="col">
+                <div style="max-width: 700px; margin-right: auto; margin-left: auto;">
+                    <h3 class="mb-4">AI generated response:</h3>
+                    <div class="pt-4 pb-2" style="border-top: solid 3px rgba(58, 58, 58, 0.726); border-bottom: solid 3px rgba(58, 58, 58, 0.726);">
+                        <p class="lead">@promptText</p>
                     </div>
                 </div>
             </div>
+        </div>
         }
     </div>
 </section>
 
 
 @code {
-    private string? APIKey { get; set; } = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
-
     private string prompt { get; set; } = "";
+    private string? promptText { get; set; }
+    private string? responseStatus { get; set; }
 
-    private string responseStatus { get; set; } = "";
+    [Inject] private IOpenAIService? OpenAIService { get; set; }
 
-    private string errorMessage { get; set; } = "";
+    private PromptResponse? promptResponse { get; set; }
 
-    private string promptText { get; set; } = "";
-
-
-    private async Task AskOpenAI()
+    private async Task GetOpenAIResponse()
     {
-
-        var client = new HttpClient();
-
-        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", APIKey);
-
-        PromptRequest promptRequest = new PromptRequest();
-
-        promptRequest.prompt = "Write a reply to the following email: " + prompt.Replace("\n", " ");
-
-        var content = new StringContent(JsonConvert.SerializeObject(promptRequest));
-
-        content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-        var response = await client.PostAsync("https://api.openai.com/v1/completions", content);
-
-        var responseContent = await response.Content.ReadAsStringAsync();
-
-        JsonSerializerSettings settings = new JsonSerializerSettings
-            {
-                StringEscapeHandling = StringEscapeHandling.EscapeNonAscii
-            };
-
-        var promptResponse = JsonConvert.DeserializeObject<PromptResponse>(responseContent, settings);
-
-        promptText = promptResponse.Choices[0].Text;
-
-        if (response.IsSuccessStatusCode)
+        promptResponse = await OpenAIService.GetOpenAIPromptAnswerAsync(prompt);
+        
+        if (promptResponse.Choices[0].Text != null)
         {
-            responseStatus = response.StatusCode.ToString();
+            promptText = promptResponse.Choices[0].Text;
         }
         else
         {
-            responseStatus = response.StatusCode.ToString();
-            errorMessage = response.Content.ReadAsStringAsync().Result;
+            promptText = "AI Failed generating a response!";
         }
     }
 }
