@@ -1,3 +1,12 @@
+## [0.0.7](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.6...v0.0.7) (2023-01-10)
+
+
+### Bug Fixes
+
+* :bug: Fix for socket connection error behind load balancer ([c58d789](https://github.com/hoejsagerc/emailreply_io/commit/c58d789d59101a17ddf0bd3f94cc183d039e83ac))
+
+
+
 ## [0.0.6](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.5...v0.0.6) (2023-01-10)
 
 
@@ -16,15 +25,6 @@
 
 
 ## [0.0.3](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.2...v0.0.3) (2023-01-09)
-
-
-
-## [0.0.2](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.1...v0.0.2) (2023-01-09)
-
-
-### Bug Fixes
-
-* :bug: url change for badge in readme file ([6832d80](https://github.com/hoejsagerc/emailreply_io/commit/6832d80cb41bc0fd3fd70e77fda42efa157d8a9e))
 
 
 

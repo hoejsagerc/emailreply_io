@@ -1,6 +1,6 @@
 {
   "name": "EmailReply.io",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "EmailReply.io is a free webapplication whích utilizes ChatGPT to generate email responses",
   "homepage": "https://emailreply.io",
   "licence": "MIT",
