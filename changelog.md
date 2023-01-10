@@ -1,3 +1,12 @@
+## [0.0.8](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.7...v0.0.8) (2023-01-10)
+
+
+### Bug Fixes
+
+* :bug: added session state to the application ([d3749de](https://github.com/hoejsagerc/emailreply_io/commit/d3749de3bc5a7cac92d868e94d2c9dac80ecbe69))
+
+
+
 ## [0.0.7](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.6...v0.0.7) (2023-01-10)
 
 
@@ -21,10 +30,6 @@
 ### Bug Fixes
 
 * :bug: added www.emailreply.io as a host rule for the ingress ([5a818f0](https://github.com/hoejsagerc/emailreply_io/commit/5a818f0169f8b432ae2cc6b709e97b59ad02dc5a))
-
-
-
-## [0.0.3](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.2...v0.0.3) (2023-01-09)
 
 
 
