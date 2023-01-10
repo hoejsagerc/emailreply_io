@@ -1,3 +1,4 @@
+using Blazored.SessionStorage;
 using EmailReplyIo.Core.HttpClients;
 using EmailReplyIo.Core.Services;
 using EmailReplyIo.Interfaces;
@@ -9,8 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddBlazoredSessionStorage();
 builder.Services.AddHttpClient<IOpenAIApiClient, OpenAIApiClient>();
 builder.Services.AddSingleton<IOpenAIService, OpenAIService>();
+
 
 
 var app = builder.Build();
