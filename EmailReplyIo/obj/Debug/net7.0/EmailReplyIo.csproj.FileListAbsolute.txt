@@ -31,10 +31,3 @@ C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\refint\Emai
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\EmailReplyIo.pdb
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\EmailReplyIo.genruntimeconfig.cache
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\ref\EmailReplyIo.dll
-C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\Blazored.SessionStorage.dll
-C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
-C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
-C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
-C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
-C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
-C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\Microsoft.JSInterop.dll

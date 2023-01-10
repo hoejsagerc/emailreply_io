@@ -1,4 +1,3 @@
-using Blazored.SessionStorage;
 using EmailReplyIo.Core.HttpClients;
 using EmailReplyIo.Core.Services;
 using EmailReplyIo.Interfaces;
@@ -10,9 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddBlazoredSessionStorage();
 builder.Services.AddHttpClient<IOpenAIApiClient, OpenAIApiClient>();
 builder.Services.AddSingleton<IOpenAIService, OpenAIService>();
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 
 
@@ -31,6 +37,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
