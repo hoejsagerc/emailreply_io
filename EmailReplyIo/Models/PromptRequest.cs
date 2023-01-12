@@ -13,6 +13,8 @@ namespace EmailReplyIo.Models
 
         public int max_tokens { get; set; }
 
+        public int top_p { get; set; }
+
         public PromptRequest()
         {
             this.model = "text-davinci-003";
@@ -22,6 +24,8 @@ namespace EmailReplyIo.Models
             this.temperature = 0;
 
             this.max_tokens = 1000;
+
+            this.top_p = 0;
         }
     }
 }
