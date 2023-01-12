@@ -19,4 +19,4 @@ spec:
             httpOnly: false
             name: emailreplyio-session-lv2
             secure: true
-            samSite: strict
+            sameSite: strict
