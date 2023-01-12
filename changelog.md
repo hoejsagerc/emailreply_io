@@ -1,3 +1,15 @@
+# [0.2.0](https://github.com/hoejsagerc/emailreply_io/compare/v0.1.0...v0.2.0) (2023-01-12)
+
+
+### Features
+
+* :sparkles: Language and connotation feature ([2129d4c](https://github.com/hoejsagerc/emailreply_io/commit/2129d4cfef6620fcdfb2f8d1078b92018ce29e99))
+* :sparkles: Language support and mode response ([e664440](https://github.com/hoejsagerc/emailreply_io/commit/e664440ad9e7ada95af9b6c3cd2eeaee4d187555))
+* :zap: tuned the open ai prompt ([99b5ed2](https://github.com/hoejsagerc/emailreply_io/commit/99b5ed2ee897bc6222ce582d35ae054ca2c8d8e3))
+* added language support ([3cc6f91](https://github.com/hoejsagerc/emailreply_io/commit/3cc6f91d1a97028975b8c77967236dae472cb42a))
+
+
+
 # [0.1.0](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.9...v0.1.0) (2023-01-12)
 
 
@@ -31,10 +43,6 @@
 ### Bug Fixes
 
 * :bug: Fix for socket connection error behind load balancer ([c58d789](https://github.com/hoejsagerc/emailreply_io/commit/c58d789d59101a17ddf0bd3f94cc183d039e83ac))
-
-
-
-## [0.0.6](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.5...v0.0.6) (2023-01-10)
 
 
 
