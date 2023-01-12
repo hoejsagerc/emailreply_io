@@ -1,3 +1,12 @@
+## [0.0.9](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.8...v0.0.9) (2023-01-12)
+
+
+### Bug Fixes
+
+* :bug: fixed the problem by changing to an ingress route with sticky session ([ec65d88](https://github.com/hoejsagerc/emailreply_io/commit/ec65d88a255ea7bc8e15c64413a58d851f3381a7))
+
+
+
 ## [0.0.8](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.7...v0.0.8) (2023-01-10)
 
 
@@ -21,15 +30,6 @@
 
 
 ## [0.0.5](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.4...v0.0.5) (2023-01-09)
-
-
-
-## [0.0.4](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.3...v0.0.4) (2023-01-09)
-
-
-### Bug Fixes
-
-* :bug: added www.emailreply.io as a host rule for the ingress ([5a818f0](https://github.com/hoejsagerc/emailreply_io/commit/5a818f0169f8b432ae2cc6b709e97b59ad02dc5a))
 
 
 
