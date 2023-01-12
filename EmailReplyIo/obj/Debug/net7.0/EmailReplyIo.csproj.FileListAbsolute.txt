@@ -31,3 +31,5 @@ C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\refint\Emai
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\EmailReplyIo.pdb
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\EmailReplyIo.genruntimeconfig.cache
 C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\obj\Debug\net7.0\ref\EmailReplyIo.dll
+C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\BlazorComponentUtilities.dll
+C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\bin\Debug\net7.0\BlazorPro.Spinkit.dll
