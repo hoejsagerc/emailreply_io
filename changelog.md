@@ -1,3 +1,12 @@
+# [0.1.0](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.9...v0.1.0) (2023-01-12)
+
+
+### Features
+
+* :sparkles: Added loading component for when the tools is loading content ([551be06](https://github.com/hoejsagerc/emailreply_io/commit/551be06ee95d476da9096a5b2ac532a59e4e8532))
+
+
+
 ## [0.0.9](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.8...v0.0.9) (2023-01-12)
 
 
@@ -26,10 +35,6 @@
 
 
 ## [0.0.6](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.5...v0.0.6) (2023-01-10)
-
-
-
-## [0.0.5](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.4...v0.0.5) (2023-01-09)
 
 
 
