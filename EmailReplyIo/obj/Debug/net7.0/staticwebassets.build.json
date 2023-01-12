@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GLhcFZe6Wt+P0AFX8lFePpnwujk/0TWiaopfbXL2I4c=",
+  "Hash": "2y868d8pr6hOq8wP7oMfZ2xR4ni0QGkAwXX7FzgTa8Q=",
   "Source": "EmailReplyIo",
   "BasePath": "_content/EmailReplyIo",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\chris\\.nuget\\packages\\blazorpro.spinkit\\1.2.0\\staticwebassets\\spinkit.min.css",
+      "SourceId": "BlazorPro.Spinkit",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\chris\\.nuget\\packages\\blazorpro.spinkit\\1.2.0\\staticwebassets\\",
+      "BasePath": "_content/BlazorPro.Spinkit",
+      "RelativePath": "spinkit.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\chris\\.nuget\\packages\\blazorpro.spinkit\\1.2.0\\staticwebassets\\spinkit.min.css"
+    },
     {
       "Identity": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\obj\\Debug\\net7.0\\scopedcss\\bundle\\EmailReplyIo.styles.css",
       "SourceId": "EmailReplyIo",
@@ -204,6 +221,23 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Identity": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "EmailReplyIo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\",
+      "BasePath": "_content/EmailReplyIo",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
+    },
+    {
       "Identity": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "EmailReplyIo",
       "SourceType": "Discovered",
@@ -304,23 +338,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Identity": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "EmailReplyIo",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\",
-      "BasePath": "_content/EmailReplyIo",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\ICON-LICENSE",

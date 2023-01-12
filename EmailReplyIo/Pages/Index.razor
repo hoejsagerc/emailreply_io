@@ -4,6 +4,7 @@
 @using System.Text;
 @using EmailReplyIo.Interfaces;
 @using Newtonsoft.Json;
+@inject NavigationManager UriHelper
 
 <PageTitle>Index</PageTitle>
 
@@ -57,22 +58,29 @@
                     <h3 class="my-3 fw-bold" id="tool">Please copy the content of the email you would like a response to in the field below.</h3>
                 </div>
                 <InputTextArea id="Text" @bind-Value="@prompt" class="form-control text-field" style="height: 500px; max-width: 750px; margin-right: auto; margin-left: auto;"></InputTextArea>
-                <button class="btn btn-primary mt-5 mb-5 button ripple" @onclick="GetOpenAIResponse" type="button">Generate Response</button>
+                <button id="response" class="btn btn-primary mt-5 mb-5 button ripple" @onclick="GetOpenAIResponse" type="button">Generate Response</button>
             </div>
         </div>
-        @if (promptText != null)
-        {
         <div class="row my-5">
             <div class="col">
                 <div style="max-width: 700px; margin-right: auto; margin-left: auto;">
-                    <h3 class="mb-4">AI generated response:</h3>
-                    <div class="pt-4 pb-2" style="border-top: solid 3px rgba(58, 58, 58, 0.726); border-bottom: solid 3px rgba(58, 58, 58, 0.726);">
-                        <p class="lead">@promptText</p>
-                    </div>
+                    <SpinLoader IsLoading="@isLoading" Spinner="SpinnerType.Wander">
+                        <LoadingTemplate>
+                            <Wander Center="true" Color="rgb(249,0,165)" Size="70px"></Wander>
+                        </LoadingTemplate>
+                        <ContentTemplate>
+                            @if (promptText != null)
+                            {
+                                <h3 class="mb-4">AI generated response:</h3>
+                                <div class="pt-4 pb-2" style="border-top: solid 3px rgba(58, 58, 58, 0.726); border-bottom: solid 3px rgba(58, 58, 58, 0.726);">
+                                    <p class="lead">@promptText</p>
+                                </div>
+                            }
+                        </ContentTemplate>
+                    </SpinLoader>
                 </div>
             </div>
         </div>
-        }
     </div>
 </section>
 
@@ -82,12 +90,17 @@
     private string? promptText { get; set; }
     private string? responseStatus { get; set; }
 
+    private bool isLoading { get; set; } = false;
+
     [Inject] private IOpenAIService? OpenAIService { get; set; }
 
     private PromptResponse? promptResponse { get; set; }
 
     private async Task GetOpenAIResponse()
     {
+        isLoading = true;
+        StateHasChanged();
+        UriHelper.NavigateTo("/#response", true);
         promptResponse = await OpenAIService.GetOpenAIPromptAnswerAsync(prompt);
         
         if (promptResponse.Choices[0].Text != null)
@@ -98,6 +111,8 @@
         {
             promptText = "AI Failed generating a response!";
         }
+        isLoading = false;
+        StateHasChanged();
     }
 }
 
