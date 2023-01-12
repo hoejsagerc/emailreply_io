@@ -1,0 +1,25 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: emailreplyio-ingress-route
+  namespace: emailreplyio 
+  labels:
+    app: emailreplyio
+spec:
+  entryPoints:
+     - websecure
+  routes:
+    - kind: Rule
+      match: Host(`emailreply.io`)
+      services:
+        - kind: TraefikService 
+          name: emailreplyio-sticky-session
+          namespace: emailreplyio
+    - kind: Rule
+      match: Host(`www.emailreply.io`)
+      services:
+        - kind: TraefikService 
+          name: emailreplyio-sticky-session
+          namespace: emailreplyio
+  tls:
+    secretName: emailreplyio-ssl-cert
