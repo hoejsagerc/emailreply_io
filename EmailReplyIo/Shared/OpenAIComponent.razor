@@ -15,7 +15,7 @@
                 </div>
                 <div class="row mt-4 mb-2">
                     <div class="col-lg-6 text-start mb-2">
-                        <select class="my-selector" id="connotation" name="connotation">
+                        <select class="my-selector" @bind="@connotation" id="connotation" name="connotation">
                             <option value="Professional">Select Response Type</option>
                             <option value="Professional">Professional</option>
                             <option value="Academic">Academic</option>
@@ -25,7 +25,7 @@
                         </select>
                     </div>
                     <div class="col-lg-6 text-end mb-2">
-                        <select class="my-selector" id="languages" name="languages">
+                        <select class="my-selector" @bind="@language" id="languages" name="languages">
                             <option value="English">Select Language</option>
                             <option value="Afrikaans">Afrikaans</option>
                             <option value="Albanian">Albanian - shqip</option>
@@ -173,6 +173,8 @@
     private string prompt { get; set; } = "";
     private string? promptText { get; set; }
     private string? responseStatus { get; set; }
+    private string language { get; set; } = "English";
+    private string connotation { get; set; } = "Professional";
 
     private bool isLoading { get; set; } = false;
 
@@ -185,7 +187,7 @@
         isLoading = true;
         StateHasChanged();
         UriHelper.NavigateTo("/#response", true);
-        promptResponse = await OpenAIService.GetOpenAIPromptAnswerAsync(prompt);
+        promptResponse = await OpenAIService.GetOpenAIPromptAnswerAsync(prompt, language, connotation);
 
         if (promptResponse.Choices[0].Text != null)
         {

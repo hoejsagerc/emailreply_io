@@ -4,6 +4,6 @@ namespace EmailReplyIo.Interfaces
 {
     public interface IOpenAIService
     {
-        Task<PromptResponse> GetOpenAIPromptAnswerAsync(string prompt);
+        Task<PromptResponse> GetOpenAIPromptAnswerAsync(string prompt, string language, string connotation);
     }
 }

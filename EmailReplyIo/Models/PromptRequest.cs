@@ -15,13 +15,13 @@ namespace EmailReplyIo.Models
 
         public PromptRequest()
         {
-            this.model = "text-davinci-002";
+            this.model = "text-davinci-003";
 
             this.prompt = "Write this is a test";
-
+            
             this.temperature = 0;
 
-            this.max_tokens = 500;
+            this.max_tokens = 1000;
         }
     }
 }
