@@ -1,3 +1,17 @@
+# [0.3.0](https://github.com/hoejsagerc/emailreply_io/compare/v0.2.0...v0.3.0) (2023-01-12)
+
+
+### Bug Fixes
+
+* retuned the ai prompt ([a62c33f](https://github.com/hoejsagerc/emailreply_io/commit/a62c33fbddccdfbe78a96ed0d2d2c922db90e0da))
+
+
+### Features
+
+* tuned the open ai prompt ([8326c2d](https://github.com/hoejsagerc/emailreply_io/commit/8326c2d41484d013dd5b3bdf0690961d9ff36846))
+
+
+
 # [0.2.0](https://github.com/hoejsagerc/emailreply_io/compare/v0.1.0...v0.2.0) (2023-01-12)
 
 
@@ -34,15 +48,6 @@
 ### Bug Fixes
 
 * :bug: added session state to the application ([d3749de](https://github.com/hoejsagerc/emailreply_io/commit/d3749de3bc5a7cac92d868e94d2c9dac80ecbe69))
-
-
-
-## [0.0.7](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.6...v0.0.7) (2023-01-10)
-
-
-### Bug Fixes
-
-* :bug: Fix for socket connection error behind load balancer ([c58d789](https://github.com/hoejsagerc/emailreply_io/commit/c58d789d59101a17ddf0bd3f94cc183d039e83ac))
 
 
 
