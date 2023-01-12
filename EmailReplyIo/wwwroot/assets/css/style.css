@@ -54,3 +54,21 @@ body {
     cursor: pointer;
     background-color: rgb(249,0,165);
 }
+
+
+.my-selector {
+    border: 4px solid rgb(249,0,165);
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.35);
+    width: 100%;
+    height: 40px;
+}
+
+
+@media screen and (max-width: 481px) {
+    .text-field {
+        max-height: 70vh;
+    }
+}
