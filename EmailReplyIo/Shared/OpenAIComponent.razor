@@ -1,0 +1,203 @@
+﻿@using System.Net.Http.Headers;
+@using System.Text.Json;
+@using System.Text;
+@using EmailReplyIo.Interfaces;
+@using Newtonsoft.Json;
+@inject NavigationManager UriHelper
+
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <div style="max-width: 75%; margin-left: auto; margin-right: auto;">
+                <div>
+                    <h3 class="my-3 fw-bold" id="tool">Please copy the content of the email you would like a response to in the field below.</h3>
+                </div>
+                <div class="row mt-4 mb-2">
+                    <div class="col-lg-6 text-start mb-2">
+                        <select class="my-selector" @bind="@connotation" id="connotation" name="connotation">
+                            <option value="Professional">Select Response Type</option>
+                            <option value="Professional">Professional</option>
+                            <option value="Academic">Academic</option>
+                            <option value="Sweet person">Sweet</option>
+                            <option value="Freindly person">Friendly</option>
+                            <option value="Barack Obama">Barack Obama</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 text-end mb-2">
+                        <select class="my-selector" @bind="@language" id="languages" name="languages">
+                            <option value="English">Select Language</option>
+                            <option value="Afrikaans">Afrikaans</option>
+                            <option value="Albanian">Albanian - shqip</option>
+                            <option value="Amharic">Amharic - አማርኛ</option>
+                            <option value="Arabic">Arabic - العربية</option>
+                            <option value="Aragonese">Aragonese - aragonés</option>
+                            <option value="Armenian">Armenian - հայերեն</option>
+                            <option value="Asturian">Asturian - asturianu</option>
+                            <option value="Azerbaijani">Azerbaijani - azərbaycan dili</option>
+                            <option value="Basque">Basque - euskara</option>
+                            <option value="Belarusian">Belarusian - беларуская</option>
+                            <option value="Bengali">Bengali - বাংলা</option>
+                            <option value="Bosnian">Bosnian - bosanski</option>
+                            <option value="Breton">Breton - brezhoneg</option>
+                            <option value="Bulgarian">Bulgarian - български</option>
+                            <option value="Catalan">Catalan - català</option>
+                            <option value="Central Kurdish">Central Kurdish - کوردی (دەستنوسی عەرەبی)</option>
+                            <option value="Chinese">Chinese - 中文</option>
+                            <option value="Corsican">Corsican</option>
+                            <option value="Croatian">Croatian - hrvatski</option>
+                            <option value="Czech">Czech - čeština</option>
+                            <option value="Danish">Danish - dansk</option>
+                            <option value="Dutch">Dutch - Nederlands</option>
+                            <option value="English">English</option>
+                            <option value="Esperanto">Esperanto - esperanto</option>
+                            <option value="Estonian">Estonian - eesti</option>
+                            <option value="Faroese">Faroese - føroyskt</option>
+                            <option value="Filipino">Filipino</option>
+                            <option value="Finnish">Finnish - suomi</option>
+                            <option value="French">French - français</option>
+                            <option value="Galician">Galician - galego</option>
+                            <option value="Georgian">Georgian - ქართული</option>
+                            <option value="German">German - Deutsch</option>
+                            <option value="Greek">Greek - Ελληνικά</option>
+                            <option value="Guarani">Guarani</option>
+                            <option value="Gujarati">Gujarati - ગુજરાતી</option>
+                            <option value="Hausa">Hausa</option>
+                            <option value="Hawaiian">Hawaiian - ʻŌlelo Hawaiʻi</option>
+                            <option value="Hebrew">Hebrew - עברית</option>
+                            <option value="Hindi">Hindi - हिन्दी</option>
+                            <option value="Hungarian">Hungarian - magyar</option>
+                            <option value="Icelandic">Icelandic - íslenska</option>
+                            <option value="Indonesian">Indonesian - Indonesia</option>
+                            <option value="Interlingua">Interlingua</option>
+                            <option value="Irish">Irish - Gaeilge</option>
+                            <option value="Italian">Italian - italiano</option>
+                            <option value="Japanese">Japanese - 日本語</option>
+                            <option value="Kannada">Kannada - ಕನ್ನಡ</option>
+                            <option value="Kazakh">Kazakh - қазақ тілі</option>
+                            <option value="Khmer">Khmer - ខ្មែរ</option>
+                            <option value="Korean">Korean - 한국어</option>
+                            <option value="Kurdish">Kurdish - Kurdî</option>
+                            <option value="Kyrgyz">Kyrgyz - кыргызча</option>
+                            <option value="Lao">Lao - ລາວ</option>
+                            <option value="Latin">Latin</option>
+                            <option value="Latvian">Latvian - latviešu</option>
+                            <option value="Lingala">Lingala - lingála</option>
+                            <option value="Lithuanian">Lithuanian - lietuvių</option>
+                            <option value="Macedonian">Macedonian - македонски</option>
+                            <option value="Malay">Malay - Bahasa Melayu</option>
+                            <option value="Malayalam">Malayalam - മലയാളം</option>
+                            <option value="Maltese">Maltese - Malti</option>
+                            <option value="Marathi">Marathi - मराठी</option>
+                            <option value="Mongolian">Mongolian - монгол</option>
+                            <option value="Nepali">Nepali - नेपाली</option>
+                            <option value="Norwegian">Norwegian - norsk</option>
+                            <option value="Occitan">Occitan</option>
+                            <option value="Oriya">Oriya - ଓଡ଼ିଆ</option>
+                            <option value="Oromo">Oromo - Oromoo</option>
+                            <option value="Pashto">Pashto - پښتو</option>
+                            <option value="Persian">Persian - فارسی</option>
+                            <option value="Polish">Polish - polski</option>
+                            <option value="Portuguese">Portuguese - português</option>
+                            <option value="Punjabi">Punjabi - ਪੰਜਾਬੀ</option>
+                            <option value="Quechua">Quechua</option>
+                            <option value="Romanian">Romanian - română</option>
+                            <option value="Scottish">Scottish Gaelic</option>
+                            <option value="Serbian">Serbian - српски</option>
+                            <option value="Serbo-Croatian">Serbo-Croatian - Srpskohrvatski</option>
+                            <option value="Shona">Shona - chiShona</option>
+                            <option value="Sindhi">Sindhi</option>
+                            <option value="Sinhala">Sinhala - සිංහල</option>
+                            <option value="Slovak">Slovak - slovenčina</option>
+                            <option value="Slovenian">Slovenian - slovenščina</option>
+                            <option value="Somali">Somali - Soomaali</option>
+                            <option value="Southern">Southern Sotho</option>
+                            <option value="Spanish">Spanish - español</option>
+                            <option value="Sundanese">Sundanese</option>
+                            <option value="Swahili">Swahili - Kiswahili</option>
+                            <option value="Swedish">Swedish - svenska</option>
+                            <option value="Tajik">Tajik - тоҷикӣ</option>
+                            <option value="Tamil">Tamil - தமிழ்</option>
+                            <option value="Tatar">Tatar</option>
+                            <option value="Telugu">Telugu - తెలుగు</option>
+                            <option value="Thai">Thai - ไทย</option>
+                            <option value="Tigrinya">Tigrinya - ትግርኛ</option>
+                            <option value="Tongan">Tongan - lea fakatonga</option>
+                            <option value="Turkish">Turkish - Türkçe</option>
+                            <option value="Turkmen">Turkmen</option>
+                            <option value="Twi">Twi</option>
+                            <option value="Ukrainian">Ukrainian - українська</option>
+                            <option value="Urdu">Urdu - اردو</option>
+                            <option value="Uyghur">Uyghur</option>
+                            <option value="Uzbek">Uzbek - o‘zbek</option>
+                            <option value="Vietnamese">Vietnamese - Tiếng Việt</option>
+                            <option value="Walloon">Walloon - wa</option>
+                            <option value="Welsh">Welsh - Cymraeg</option>
+                            <option value="Western">Western Frisian</option>
+                            <option value="Xhosa">Xhosa</option>
+                            <option value="Yiddish">Yiddish</option>
+                            <option value="Yoruba">Yoruba - Èdè Yorùbá</option>
+                            <option value="Zulu">Zulu - isiZulu</option>
+                        </select>
+                    </div>
+                </div>
+                <InputTextArea id="Text" @bind-Value="@prompt" class="form-control text-field" style="height: 500px; max-width: 750px; margin-right: auto; margin-left: auto;"></InputTextArea>
+                <button id="response" class="btn btn-primary mt-5 mb-5 button ripple" @onclick="GetOpenAIResponse" type="button">Generate Response</button>
+            </div>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col">
+            <div style="max-width: 700px; margin-right: auto; margin-left: auto;">
+                <SpinLoader IsLoading="@isLoading" Spinner="SpinnerType.Wander">
+                    <LoadingTemplate>
+                        <Wander Center="true" Color="rgb(249,0,165)" Size="70px"></Wander>
+                    </LoadingTemplate>
+                    <ContentTemplate>
+                        @if (promptText != null)
+                        {
+                            <h3 class="mb-4">AI generated response:</h3>
+                            <div class="pt-4 pb-2" style="border-top: solid 3px rgba(58, 58, 58, 0.726); border-bottom: solid 3px rgba(58, 58, 58, 0.726);">
+                                <p class="lead">@promptText</p>
+                            </div>
+                        }
+                    </ContentTemplate>
+                </SpinLoader>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private string prompt { get; set; } = "";
+    private string? promptText { get; set; }
+    private string? responseStatus { get; set; }
+    private string language { get; set; } = "English";
+    private string connotation { get; set; } = "Professional";
+
+    private bool isLoading { get; set; } = false;
+
+    [Inject] private IOpenAIService? OpenAIService { get; set; }
+
+    private PromptResponse? promptResponse { get; set; }
+
+    private async Task GetOpenAIResponse()
+    {
+        isLoading = true;
+        StateHasChanged();
+        UriHelper.NavigateTo("/#response", true);
+        promptResponse = await OpenAIService.GetOpenAIPromptAnswerAsync(prompt, language, connotation);
+
+        if (promptResponse.Choices[0].Text != null)
+        {
+            promptText = promptResponse.Choices[0].Text;
+        }
+        else
+        {
+            promptText = "AI Failed generating a response!";
+        }
+        isLoading = false;
+        StateHasChanged();
+    }
+}
