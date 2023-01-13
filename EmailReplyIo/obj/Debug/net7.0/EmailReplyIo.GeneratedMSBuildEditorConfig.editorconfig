@@ -9,41 +9,41 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EmailReplyIo
 build_property.RootNamespace = EmailReplyIo
-build_property.ProjectDir = C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\
+build_property.ProjectDir = c:\Users\chris\dev\repos\emailreply_io\EmailReplyIo\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\chris\dev\repos\emailreply_io\EmailReplyIo
+build_property.MSBuildProjectDirectory = c:\Users\chris\dev\repos\emailreply_io\EmailReplyIo
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/App.razor]
+[c:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Pages/Index.razor]
+[c:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Shared/AnchorNavigation.razor]
+[c:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Shared/AnchorNavigation.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFuY2hvck5hdmlnYXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Shared/OpenAIComponent.razor]
+[c:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Shared/OpenAIComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE9wZW5BSUNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/_Imports.razor]
+[c:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Shared/MainLayout.razor]
+[c:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-r8012bvgu4
 
-[C:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Pages/Error.cshtml]
+[c:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Pages/_Host.cshtml]
+[c:/Users/chris/dev/repos/emailreply_io/EmailReplyIo/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
