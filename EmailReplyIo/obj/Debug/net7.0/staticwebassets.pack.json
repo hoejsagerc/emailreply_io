@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\illustrations\\report.svg"
     },
     {
+      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\assets\\img\\illustrations\\robot_hero3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\robot_hero3.png"
+    },
+    {
       "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
@@ -75,10 +79,6 @@
     {
       "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\chris\\dev\\repos\\emailreply_io\\EmailReplyIo\\wwwroot\\favicon.png",
