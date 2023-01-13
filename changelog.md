@@ -1,3 +1,17 @@
+# [0.4.0](https://github.com/hoejsagerc/emailreply_io/compare/v0.3.0...v0.4.0) (2023-01-13)
+
+
+### Bug Fixes
+
+* uncomment line to not selet h1 ([bc5b999](https://github.com/hoejsagerc/emailreply_io/commit/bc5b9996d2cf1490be372c6d9c767aafa5d9db2b))
+
+
+### Features
+
+* :zap: Complete redesign of the application ([3ee1f9e](https://github.com/hoejsagerc/emailreply_io/commit/3ee1f9e6907d13f844729d943bf478365d4146d5))
+
+
+
 # [0.3.0](https://github.com/hoejsagerc/emailreply_io/compare/v0.2.0...v0.3.0) (2023-01-12)
 
 
@@ -39,15 +53,6 @@
 ### Bug Fixes
 
 * :bug: fixed the problem by changing to an ingress route with sticky session ([ec65d88](https://github.com/hoejsagerc/emailreply_io/commit/ec65d88a255ea7bc8e15c64413a58d851f3381a7))
-
-
-
-## [0.0.8](https://github.com/hoejsagerc/emailreply_io/compare/v0.0.7...v0.0.8) (2023-01-10)
-
-
-### Bug Fixes
-
-* :bug: added session state to the application ([d3749de](https://github.com/hoejsagerc/emailreply_io/commit/d3749de3bc5a7cac92d868e94d2c9dac80ecbe69))
 
 
 
